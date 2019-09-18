@@ -1,0 +1,14 @@
+{
+    "database" : {
+        "ip": "",
+        "port": "",
+        "keyspace": "",
+        "username": "",
+        "password": ""
+    },
+
+    "appConfig" : {
+        "appPort" : "",
+        "authSecretToken" : "itp1397@thinkpalm"
+    }
+}

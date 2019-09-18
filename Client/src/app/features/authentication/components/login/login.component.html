@@ -1,0 +1,8 @@
+<br><br><br><br>
+<form #loginForm="ngForm" class="form-padding" (ngSubmit)="onSubmit(loginForm)">
+  username: <input type="text" value="admin" name="username" [(ngModel)]="username"> <br>
+  password: <input type="password" value="admin" name="password" [(ngModel)]="password">
+  <input type="submit" value="Login">
+  <br>
+  <label>TOKEN : {{token}}</label>
+</form>
