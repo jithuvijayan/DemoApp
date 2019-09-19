@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { SocketService } from './shared/services/socket.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demoApp';
+  private socketservice: SocketService;
+  constructor() {
+    this.socketservice = new SocketService();
+  }
 }

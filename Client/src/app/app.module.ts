@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { SocketService } from './shared/services/socket.service';
 @NgModule({
   declarations: [
     AppComponent
@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [SocketService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

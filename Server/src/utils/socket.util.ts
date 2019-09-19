@@ -17,7 +17,9 @@ module.exports = (server: any) => {
     /**
      * connection
      */
-    socketio.on('connection', onConnect);
+    socketio.on('connection', function(connection: any) {
+        console.log('a user connected: ' +  connection.id);
+    });
 
     /**
      * onConnect

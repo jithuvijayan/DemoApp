@@ -14,12 +14,9 @@ server.listen(app_port, function (req: any, res: any) {
     const addressInfo = server.address();
     console.log('Server listening on port: ' + addressInfo["port"]);
     const appInit = new AppInializer(server);
-    server.on('error', onError);
-    server.on('listening', onListening);
 });
 
-
-function onError(error: NodeJS.ErrnoException): void {
+server.on('error', function(error: NodeJS.ErrnoException){
     if (error.syscall !== 'listen') {
         throw error;
     }
@@ -36,8 +33,7 @@ function onError(error: NodeJS.ErrnoException): void {
         default:
             throw error;
     }
-}
-
+});
 
 function onListening(): void {
     // const addr = server.address();

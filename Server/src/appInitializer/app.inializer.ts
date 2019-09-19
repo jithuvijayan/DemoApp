@@ -1,5 +1,4 @@
 import RedisClient from '../utils/redis.util';
-
 export default class AppInializer {
 
     private redisClient: RedisClient;
@@ -7,10 +6,12 @@ export default class AppInializer {
 
     constructor(server: any) {
         this.redisClient = new RedisClient();
+        this.initializeSocketService(server);
     }
 
-    public init() {
-      
+    public initializeSocketService(server: any) {
+        const socket = require('../utils/socket.util')(server);
+        (global as any).socket = socket;
     }
 
     getRedis() {

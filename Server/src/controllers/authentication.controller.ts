@@ -1,6 +1,7 @@
 
 import { Request, Response } from 'express';
 import AuthenticationService from '../service/authentication.service'
+import { SocketService } from '../service/socket.service';
 export default class AuthenticationController {
     private authenticationservices: AuthenticationService;
     constructor() {
