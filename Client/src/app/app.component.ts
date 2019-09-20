@@ -7,8 +7,6 @@ import { SocketService } from './shared/services/socket.service';
 })
 export class AppComponent {
   title = 'demoApp';
-  private socketservice: SocketService;
-  constructor() {
-    this.socketservice = new SocketService();
+  constructor(private socketservice: SocketService) {
   }
 }

@@ -1,8 +1,42 @@
-<br><br><br><br>
-<form #loginForm="ngForm" class="form-padding" (ngSubmit)="onSubmit(loginForm)">
-  username: <input type="text" value="admin" name="username" [(ngModel)]="username"> <br>
-  password: <input type="password" value="admin" name="password" [(ngModel)]="password">
-  <input type="submit" value="Login">
-  <br>
-  <label>TOKEN : {{token}}</label>
+
+
+<form class="form-horizontal" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+  <fieldset>
+
+    <!-- Form Name -->
+    <legend>Login</legend>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="fname">First Name</label>
+      <div class="col-md-4">
+        <input type="text" class="form-control" placeholder="Your Email *" name="username" [(ngModel)]="username" required="">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="lname">Last Name</label>
+      <div class="col-md-4">
+        <input type="password" class="form-control" placeholder="Your Password *" name="password"
+        [(ngModel)]="password" required="">
+
+      </div>
+    </div>
+
+
+
+    <!-- Button (Double) -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="save"></label>
+      <div class="col-md-8">
+          <input type="submit" class="btn btn-primary" value="Login">
+      </div>
+    </div>
+
+  </fieldset>
 </form>
+<div class="col-md-12">
+    <textarea class="form-control">{{token}}</textarea>
+  </div>

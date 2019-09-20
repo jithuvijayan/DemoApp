@@ -1,0 +1,25 @@
+@import '_variables';
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    background-color: black;
+    color: white;
+}
+.nav-bar {
+    background: $footer-color;
+}
+ul {
+ li{
+     width: 100%;
+     text-align: center
+     a{
+         text-decoration: none;
+     }
+ }
+}
